@@ -32,4 +32,4 @@ gridItems.forEach((item) => {
 let gridNumber = 16;
 createGrid(gridNumber)
 
-console.log(board)
+console.log(gridItems)
