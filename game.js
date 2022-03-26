@@ -29,6 +29,7 @@ function clearGrid() {
       if (userInput === null || userInput == "" || parseInt(userInput) > 100) {
         alert("not a valid entry, creating default 32 resolution grid")
         createGrid(32)
+        changeColor("black")
         listenGrid();
         return
         
