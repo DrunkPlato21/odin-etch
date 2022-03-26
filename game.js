@@ -17,10 +17,10 @@ function createGrid(num) {
 
 
 //EVENT LISTENERS 
-let board = document.querySelectorAll('.board');
+let gridItems = document.querySelectorAll('.grid-item');
 
 // we use the .forEach method to iterate through each button
-board.forEach((item) => {
+gridItems.forEach((item) => {
 
     // and for each one we add a 'click' listener
     item.addEventListener('mouseover', () => {
