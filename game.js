@@ -18,7 +18,6 @@ let gridNumber = 16;
 
 
 createGrid(gridNumber)
-
 let gridItems = document.querySelectorAll('.grid-item');
 
 
@@ -30,7 +29,9 @@ gridItems.forEach((item) => {
 
     // and for each one we add a 'click' listener
     item.addEventListener('mouseover', () => {
-      console.log('Hover Detected')
+      console.log('Hover Detected');
+      item.style.backgroundColor = "black"
+      
     });
   });
 
