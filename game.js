@@ -9,13 +9,15 @@ function createGrid(num) {
         div.classList.add("grid-item")
         gridContainer.appendChild(div);
     }   
+
+    listenGrid();
 }
 
 
 function clearGrid() {
 
     const gridContainer = document.querySelector(".board");
-      console.log(gridContainer)
+     // console.log(gridContainer)
 
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
@@ -33,7 +35,7 @@ function clearGrid() {
       }
 
         createGrid(userInput);
-        listenGrid();
+       
 
 }
 
@@ -52,20 +54,23 @@ function listenGrid(){
   gridItems.forEach((item) => {
 
     item.addEventListener('mouseover', () => {
-      console.log('Hover Detected');
-      item.style.backgroundColor = gridColor;
+      //console.log('Hover Detected');
+      item.style.backgroundColor = gridColor;  
       
     });
+
+
   });
 
 }
+
 
 //init
 
 let gridNumber = 64;
 let gridColor = "red";
 createGrid(gridNumber);
-listenGrid();
+
 
 
 
