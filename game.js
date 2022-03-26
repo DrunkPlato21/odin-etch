@@ -1,5 +1,4 @@
 
-
 function createGrid(num) {
     const gridContainer = document.querySelector(".board");
     gridContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
@@ -14,16 +13,23 @@ function createGrid(num) {
 }
 
 
-const buttons = document.querySelectorAll('button');
 
+
+
+//EVENT LISTENERS 
+let board = document.querySelectorAll('.board');
 
 // we use the .forEach method to iterate through each button
-buttons.forEach((button) => {
+board.forEach((item) => {
 
     // and for each one we add a 'click' listener
-    button.addEventListener('click', () => {
-      alert(button.id);
+    item.addEventListener('mouseover', () => {
+      console.log('Hover Detected')
     });
   });
 
-createGrid(16)
+
+let gridNumber = 16;
+createGrid(gridNumber)
+
+console.log(board)

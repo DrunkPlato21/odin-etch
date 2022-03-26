@@ -44,4 +44,5 @@ html {
 
 .grid-size-controls {
     margin-top: 10px;
+    align-self: center;
 }
