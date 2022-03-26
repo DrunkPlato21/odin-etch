@@ -16,6 +16,7 @@
         
         <div class="content">
             <div class="title"><h1>Etch-A-Sketch App</h1></div>
+            <button class="reset" onclick="clearGrid()">Reset Board</button>
             <div class="board">
                               
                 
@@ -26,16 +27,16 @@
             <div class="buttons">
 
                 <button>Black</button>
-                <button>White</button>
+                <button>Red</button>
                 <button>Random</button>
-                <button>Reset</button>
+                
 
             </div>
             
             <div class="grid-size-controls">
                 Set grid size:
                 <input type="text" placeholder="Size of Board" value="16" style="width: 20px">
-                <button>Set</button>
+                <button onclick="setGrid()">Set</button>
             </div>
         </div>
             

@@ -8,34 +8,49 @@ function createGrid(num) {
         let div = document.createElement("div");
         div.classList.add("grid-item")
         gridContainer.appendChild(div);
-    }
-
-
-    
+    }   
 }
 
-let gridNumber = 16;
 
+function clearGrid() {
 
-createGrid(gridNumber)
-let gridItems = document.querySelectorAll('.grid-item');
+const gridContainer = document.querySelector(".board");
+  console.log(gridContainer)
 
+while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.firstChild);
+    
+  } 
+let userInput = prompt("What resolution would you like? (max 100)");
 
+createGrid(userInput);
+listenGrid();
+
+}
 //EVENT LISTENERS 
 
+function listenGrid(){
 
+  let gridItems = document.querySelectorAll('.grid-item');
 // we use the .forEach method to iterate through each button
-gridItems.forEach((item) => {
+  gridItems.forEach((item) => {
 
-    // and for each one we add a 'click' listener
     item.addEventListener('mouseover', () => {
       console.log('Hover Detected');
-      item.style.backgroundColor = "black"
+      item.style.backgroundColor = "red"
       
     });
   });
 
+}
+
+//init
+
+let gridNumber = 64;
+createGrid(gridNumber);
+listenGrid();
 
 
-console.log(gridItems)
 
+
+  
