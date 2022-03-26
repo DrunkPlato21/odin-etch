@@ -9,15 +9,21 @@ function createGrid(num) {
         div.classList.add("grid-item")
         gridContainer.appendChild(div);
     }
+
+
     
 }
 
+let gridNumber = 16;
 
 
+createGrid(gridNumber)
+
+let gridItems = document.querySelectorAll('.grid-item');
 
 
 //EVENT LISTENERS 
-let gridItems = document.querySelectorAll('.grid-item');
+
 
 // we use the .forEach method to iterate through each button
 gridItems.forEach((item) => {
@@ -29,7 +35,6 @@ gridItems.forEach((item) => {
   });
 
 
-let gridNumber = 16;
-createGrid(gridNumber)
 
 console.log(gridItems)
+
